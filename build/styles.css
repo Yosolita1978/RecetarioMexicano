@@ -1,0 +1,124 @@
+/* Basic Reset
+Colors
+Federal Blue #12025F
+Golden Gate #EE5309
+White #FFFFFF
+Gray: #555358
+Soft Blue: # 067Bc2
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* No scroll on the body */
+}
+
+/* Header styles */
+header {
+    background-color: #12025F;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensures the nav bar takes full width */
+    padding: 0.5em 1em; /* Removes padding inside the nav */
+}
+
+.logo {
+    margin: 0; /* Removes margin around the logo div */
+    flex: 0 1 auto; /* Allows the logo to shrink but not grow, maintaining its intrinsic size */
+}
+
+.logo img {
+    width: 35px; /* Maintains original image width */
+    display: block;
+}
+
+.navigation {
+    list-style: none;
+}
+
+.navigation li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    padding: 20px;
+    text-align: center;
+    background-color: #EE5309;
+    color: #fff;
+}
+
+.hero h1 {
+    margin-bottom: 20px; /* Adjust the space as needed */
+}
+
+/* If you also want to control the top margin of the paragraph */
+.hero p {
+    margin-top: 0; /* Remove the top margin if it exists */
+}
+
+/* Chatbot Section */
+.chatbot {
+    flex: 1; /* Takes up all available space */
+    display: flex;
+    justify-content: center; /* Center iframe horizontally */
+    align-items: center; /* Center iframe vertically */
+}
+
+.chatbot iframe {
+    width: 100%;
+    max-width: 800px; /* Maximum width of the iframe */
+    height: 400px; /* Adjust height as needed */
+    overflow: auto; /* Allows scrolling within the iframe */
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #12025F;
+    color: #fff;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+footer a {
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Optionally removes underline */
+}
+
+footer a:hover, footer a:focus {
+    color: #ccc; /* Light gray color for hover and focus states for better user interaction */
+    text-decoration: underline; /* Optionally adds underline on hover for clarity */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chatbot iframe {
+        width: 90%; /* Smaller width on smaller screens */
+    }
+}
